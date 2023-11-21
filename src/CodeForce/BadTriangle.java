@@ -17,10 +17,12 @@ import java.io.InputStreamReader;
 
 public class BadTriangle {
 
-
-
+    // Actual algorithm
     public static void badTriangle(int[] triSidesArr) {
         for (int i = 2; i < triSidesArr.length; i++) {
+//            Since i know the array is sorted and it is in ascending order, i know the first two numbers in
+//            the array are the smallest. that is why, if the sum of first two num is smaller or equals to any other
+//            number in the array, that three number set is by bad triangle`
             if (triSidesArr[0] + triSidesArr[1] <= triSidesArr[i]) {
                 System.out.println("1 2" + " " + (i + 1));
                 return;
@@ -29,7 +31,7 @@ public class BadTriangle {
         System.out.println(-1);
     }
 
-
+    //    Helper algorithms to format the codeforce input
     public static boolean isNumber(String num) {
         try {
             Integer.parseInt(num);
@@ -40,6 +42,7 @@ public class BadTriangle {
     }
 
 
+    //    Helper algorithms to format the codeforce input
     public static int[] returnIntArr(String[] strArr) {
         int[] convertedArr = new int[strArr.length];
         for (int i = 0; i < strArr.length; i++) {
@@ -48,6 +51,7 @@ public class BadTriangle {
         return convertedArr;
     }
 
+    //    Helper algorithms to format the codeforce input
     public static boolean lookForString(String str) {
         if (str.contains(" ")) {
             return true;
@@ -56,7 +60,7 @@ public class BadTriangle {
         }
     }
 
-
+    // Main method
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
