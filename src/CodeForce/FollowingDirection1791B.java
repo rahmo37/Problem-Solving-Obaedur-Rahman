@@ -46,6 +46,7 @@ public class FollowingDirection1791B {
             directionArr[i] = reader.readLine();
             i++;
         }
+        System.out.println(Arrays.toString(directionArr));
         for(int j = 0; j < directionArr.length; j++) {
             if(!isNumber(directionArr[j])) {
                 System.out.println(followDirection(directionArr[j].split("")));
