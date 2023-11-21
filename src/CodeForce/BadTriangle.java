@@ -1,12 +1,12 @@
 //            1.	A sorted ascending array will be given,
-//            2.	Find a set of three values which will NOT form a triangle.
+//            2.	Find a set of three values that will NOT form a triangle.
 //            3.	The indices of the values in the set must move to the ascending order 
-//            4.	ai Means a value, and I, j, k means indices.
-//            5.	ai-1’s value must be less than or equal to ai ,  meaning 10, 10 is a valid values
-//            6.	the indices must be in the following order I < J < K
-//            7.	the values must be less than or equal to 109 (1,000,000,000)
-//            8.	If values of I and J is NOT bigger than K, they are not going to form a perfect triangle, so it’s a valid answer.
-//            9.	After solving analyzing the test cases in code forces, it looks like if I + j = k, this is also a valid answer.
+//            4.	ai Means a value, and i, j, k means indices.
+//            5.	ai-1’s value must be less than or equal to ai,  meaning 10, 10 is a valid value
+//            6.	The indices must be in the following order i < j < k
+//            7.	The values must be less than or equal to 109 (1,000,000,000)
+//            8.	If values of i and j is NOT bigger than k, they are not going to form a perfect triangle, so it’s a valid answer.
+//            9.	After solving and analyzing the test cases in code forces, it looks like if i + j = k, this is also a valid answer.
 
 
 package CodeForce;
