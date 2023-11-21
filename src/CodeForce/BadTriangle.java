@@ -22,7 +22,7 @@ public class BadTriangle {
         for (int i = 2; i < triSidesArr.length; i++) {
 //            Since i know the array is sorted and it is in ascending order, i know the first two numbers in
 //            the array are the smallest. that is why, if the sum of first two num is smaller or equals to any other
-//            number in the array, that three number set is by bad triangle`
+//            number in the array, that three number set is my bad triangle`
             if (triSidesArr[0] + triSidesArr[1] <= triSidesArr[i]) {
                 System.out.println("1 2" + " " + (i + 1));
                 return;
