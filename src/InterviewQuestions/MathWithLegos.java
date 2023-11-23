@@ -23,37 +23,49 @@ import java.util.Arrays;
 public class MathWithLegos {
 
     public static int returnLowestSumPossible(int[] rowA, int[] rowB) {
+//        if rows sum are equal then return the sum immidiately
         int rowASum = returnSum(rowA);
         int rowBSum = returnSum(rowB);
-        int lastZeroOfRowA = returnLastIndex(rowA, 0);
-        int lastZeroOfRowB = returnLastIndex(rowB, 0);
-
         if (rowASum == rowBSum) {
             return rowASum;
         }
 
+//        Grabbing the last index of the 0s for each row
+        int lastZeroOfRowA = returnLastIndex(rowA, 0);
+        int lastZeroOfRowB = returnLastIndex(rowB, 0);
+
+
+//        filling all the 0s with 1s
         for (int i = 0; i < rowA.length; i++) {
             if (rowA[i] == 0) {
                 rowA[i] = 1;
+
             }
         }
+
+
         for (int i = 0; i < rowB.length; i++) {
             if (rowB[i] == 0) {
                 rowB[i] = 1;
+
             }
         }
+
+
         rowASum = returnSum(rowA);
         rowBSum = returnSum(rowB);
 
-        if (rowASum > rowBSum) {
-            if (rowASum - (rowBSum - 1) <= 0 || rowBSum - (rowASum - 1) <= 1) {
-                return -1;
+        try {
+            if (rowASum > rowBSum) {
+                rowB[lastZeroOfRowB] += rowASum - rowBSum;
+
+            } else {
+                rowA[lastZeroOfRowA] += rowBSum - rowASum;
+
             }
-            rowB[lastZeroOfRowB] = rowASum - (rowBSum - 1);
-
-        } else {
-            rowA[lastZeroOfRowA] = rowBSum - (rowASum - 1);
-
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return -1;
         }
         System.out.println(Arrays.toString(rowA));
         System.out.println(Arrays.toString(rowB));
@@ -77,10 +89,9 @@ public class MathWithLegos {
     }
 
     public static int returnLastIndex(int[] numArr, int num) {
-        int lastIndex = 0;
+        int lastIndex = -1;
         for (int i = 0; i < numArr.length; i++) {
             if (numArr[i] == num) {
-                System.out.println("Hi");
                 lastIndex = i;
             }
         }
@@ -97,9 +108,8 @@ public class MathWithLegos {
     }
 
     public static void main(String[] args) {
-        int[] rowA = {1, 3, 0, 0, 0, 0, 0};
-        int[] rowB = {1, 5, 0, 0};
-
+        int[] rowA = {0, 0, 0};
+        int[] rowB = {1, 1};
         System.out.println(returnLowestSumPossible(rowA, rowB));
     }
 }
