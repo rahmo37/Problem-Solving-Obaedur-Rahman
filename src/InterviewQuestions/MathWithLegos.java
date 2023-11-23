@@ -30,7 +30,7 @@ public class MathWithLegos {
             return rowASum;
         }
 
-//        Grabbing the last index of the 0s for each row
+//        Grabbing the last index of the 0s for each row, if no 0 exists -1 will be returned
         int lastZeroOfRowA = returnLastIndex(rowA, 0);
         int lastZeroOfRowB = returnLastIndex(rowB, 0);
 
@@ -43,7 +43,7 @@ public class MathWithLegos {
             }
         }
 
-
+//        filling all the 0s with 1s
         for (int i = 0; i < rowB.length; i++) {
             if (rowB[i] == 0) {
                 rowB[i] = 1;
@@ -51,10 +51,13 @@ public class MathWithLegos {
             }
         }
 
-
+//        Sum after converting all the 0s with 1s
         rowASum = returnSum(rowA);
         rowBSum = returnSum(rowB);
 
+//        Here i am not grabbing a specific bigger array anymore, which ever array needs to have extra value add, will be added dynamically with the last zero index
+//        if an Array need to have extra value added but the last zero index is -1 (meaning there was no zeros in the array to start with) then an exception will be thrown and the function
+//        will return -1
         try {
             if (rowASum > rowBSum) {
                 rowB[lastZeroOfRowB] += rowASum - rowBSum;
