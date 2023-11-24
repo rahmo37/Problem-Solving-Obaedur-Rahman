@@ -64,7 +64,6 @@ public class MathWithLegos {
 
             } else {
                 rowA[lastZeroOfRowA] += rowBSum - rowASum;
-
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
