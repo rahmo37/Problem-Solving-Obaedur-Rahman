@@ -1,10 +1,10 @@
-//Write a program to find the nth fibonacci number.
+package Programiz;//Write a program to find the nth fibonacci number.
 //
-//        Fibonacci Numbers are a series of numbers in which each number is the sum of two preceding numbers.
+//        Programiz.Fibonacci Numbers are a series of numbers in which each number is the sum of two preceding numbers.
 //
 //        For example,
 //
-//        Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8
+//        Programiz.Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8
 
 
 public class Fibonacci {

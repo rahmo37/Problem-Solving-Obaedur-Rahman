@@ -1,8 +1,10 @@
+package Programiz;
+
 public class toggleCharacter {
 
 
     public static void main(String[] args) {
-        System.out.println(toggleCharacter("Test"));
+        System.out.println(toggleCharacter("Programiz.Test"));
     }
 
     public static String toggleCharacter(String str) {

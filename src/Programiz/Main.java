@@ -1,3 +1,4 @@
+package Programiz;
 
 import java.util.Scanner;
 

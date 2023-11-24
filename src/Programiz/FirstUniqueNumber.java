@@ -1,4 +1,4 @@
-// Arnob's Problem Set
+package Programiz;// Arnob's Problem Set
 
 //13.	First Unique Character Write a function firstUnique(s) that takes a string and returns the first non-repeating character's index.
 //        If it doesn't exist, return -1. Example:

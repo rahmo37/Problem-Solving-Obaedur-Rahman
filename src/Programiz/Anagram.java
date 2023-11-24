@@ -1,15 +1,17 @@
+package Programiz;
+
 public class Anagram {
 
     public static String isAnagram(String txt1, String txt2) {
         if(txt1.equals(txt2)) {
-            return "Not an Anagram";
+            return "Not an Programiz.Anagram";
         }
         char[] txt1Arr = txt1.toCharArray();
         char[] txt2Arr = txt2.toCharArray();
         if(returnTotal(txt1Arr) == returnTotal(txt2Arr)) {
-            return "Anagram";
+            return "Programiz.Anagram";
         } else {
-            return "Not an Anagram";
+            return "Not an Programiz.Anagram";
         }
     }
 
