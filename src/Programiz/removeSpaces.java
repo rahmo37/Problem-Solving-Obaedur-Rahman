@@ -1,3 +1,5 @@
+package Programiz;
+
 import java.util.Scanner;
 
 public class removeSpaces {
@@ -22,7 +24,7 @@ public class removeSpaces {
         Scanner scanner = new Scanner(System.in);
         String text = scanner.nextLine();
 
-        // remove spaces from input string using removeSpaces() method
+        // remove spaces from input string using Programiz.removeSpaces() method
         String noSpacesString = removeSpaces(text);
 
         // print the resulting string

@@ -1,3 +1,5 @@
+package Programiz;
+
 public class Palindrome {
     public static void main(String[] args) {
         String str = "radar";
@@ -30,7 +32,7 @@ public class Palindrome {
 //            i++;
 //            j--;
 //        }
-//        return true; // Palindrome if no mismatches found
+//        return true; // Programiz.Palindrome if no mismatches found
 //    }
 //
 //    public static void main(String[] args) {

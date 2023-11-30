@@ -1,3 +1,5 @@
+package Programiz;
+
 public class RecursiveExponent {
     static double counter = 1.0;
 

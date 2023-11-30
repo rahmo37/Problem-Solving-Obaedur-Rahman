@@ -1,3 +1,5 @@
+package Programiz;
+
 public class CountCapitalLetters {
 
     public static int CountCapitalLetters(String text) {

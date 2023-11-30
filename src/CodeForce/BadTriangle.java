@@ -60,7 +60,7 @@ public class BadTriangle {
         }
     }
 
-    // Main method
+    // Programiz.Main method
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 

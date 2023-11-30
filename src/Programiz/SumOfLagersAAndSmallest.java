@@ -1,3 +1,5 @@
+package Programiz;
+
 public class SumOfLagersAAndSmallest {
 
     public static int getSum(int[] numArr) {

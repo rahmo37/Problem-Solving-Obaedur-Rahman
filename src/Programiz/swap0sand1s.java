@@ -1,3 +1,5 @@
+package Programiz;
+
 import java.util.Arrays;
 
 public class swap0sand1s {

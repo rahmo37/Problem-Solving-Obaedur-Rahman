@@ -1,3 +1,5 @@
+package Programiz;
+
 public class countNumber {
 
 

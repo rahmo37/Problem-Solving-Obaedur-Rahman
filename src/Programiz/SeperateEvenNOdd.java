@@ -1,3 +1,5 @@
+package Programiz;
+
 import java.util.ArrayList;
 
 public class SeperateEvenNOdd {

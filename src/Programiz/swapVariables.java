@@ -1,3 +1,5 @@
+package Programiz;
+
 import java.util.Scanner;
 
 public class swapVariables {
