@@ -1,8 +1,7 @@
 package Leetcode;
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class CheckIfTwoStringArraysAreEquivalentForInt1662 {
+public class CheckIfTwoStringArraysAreEquivalentForInt1662A {
 
         public static boolean arrayIntsAreEqual(int[] array1, int[] array2) {
             if (array1.length != array2.length) {
