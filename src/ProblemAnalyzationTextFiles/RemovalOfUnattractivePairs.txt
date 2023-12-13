@@ -1,0 +1,14 @@
+Conditions and main Points
+
+* A pair of adjacent characters can be removed if, and only if, they are different.
+
+* Only directly adjacent characters in the string can be considered for deletion in each step.
+
+* After each deletion, the string is re-evaluated for further adjacent pairs that can be deleted.
+
+* The process stops when no more pairs of different adjacent characters are available for deletion.
+
+* The goal is to minimize the length of the string through these deletions.
+
+* Multiple valid sequences of deletions can exist, leading to the same minimum length.
+
