@@ -4,57 +4,47 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
 public class RowGCD1459 {
 
     public static void printGCD(long[] gcdNumsArr) {
-        long largestNum = returnLargestNum(gcdNumsArr);
-        List<Long> divisorsOfTheLarNum = returnDivisors(largestNum);
-        List<Long> commonDivisors = new ArrayList<>();
-        boolean isDivisor = true;
-
-        for (int i = 0; i < divisorsOfTheLarNum.size(); i++) {
-            isDivisor = true;
-            for (int j = 0; j < gcdNumsArr.length; j++) {
-                if (gcdNumsArr[j] % divisorsOfTheLarNum.get(i) != 0) {
-                    isDivisor = false;
-                    break;
-                }
-            }
-            if (isDivisor) {
-                commonDivisors.add(divisorsOfTheLarNum.get(i));
-            }
+        if(gcdNumsArr.length == 1) {
+            System.out.println(gcdNumsArr[0]);
+            return;
         }
-        System.out.print(Collections.max(commonDivisors) + " ");
+        long GCD = returnGCDOfTwo(gcdNumsArr[0], gcdNumsArr[1]);
+        if (GCD == 1) {
+            System.out.println(1);
+            return;
+        }
+        for (int i = 2; i < gcdNumsArr.length; i++) {
+            GCD = returnGCDOfTwo(GCD, gcdNumsArr[i]);
+        }
+        System.out.print(GCD + " ");
     }
 
-    public static List<Long> returnDivisors(long num) {
-        List<Long> divisors = new ArrayList<>();
-        for (int i = 1; i <= Math.sqrt(num); i++) {
-            if (num % i == 0) {
-                divisors.add((long) i);
-                // If both divisors are not the same, add the second one
-//                Meaning if the both i and num / i are same, we are not adding it twice.
-//                4 % 2 = 0, 2 * 2 = 4, so we include only one 2
-                if (i != num / i) {
-                    divisors.add(num / i);
-                }
-            }
+    public static int returnGCDOfTwo(long num1, long num2) {
+        long a = 0;
+        long b = 0;
+        if (num1 > num2) {
+            a = num1;
+            b = num2;
+        } else {
+            a = num2;
+            b = num1;
         }
-        return divisors;
+        long remainder = a % b;
+        if (remainder == 0) {
+            return (int) b;
+        }
+        a = b;
+        b = remainder;
+        return returnGCDOfTwo(a, b);
     }
 
-    public static long returnLargestNum(long[] gcdNumsArr) {
-        long largestNum = gcdNumsArr[0];
-        for (int i = 0; i < gcdNumsArr.length; i++) {
-            if (gcdNumsArr[i] > largestNum) {
-                largestNum = gcdNumsArr[i];
-            }
-        }
-        return largestNum;
-    }
 
     public static long[] returnIntArr(String[] strArr) {
         long[] convertedArr = new long[strArr.length];
