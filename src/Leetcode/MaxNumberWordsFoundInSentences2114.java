@@ -3,33 +3,18 @@ package Leetcode;
 public class MaxNumberWordsFoundInSentences2114 {
 
     public static int mostWordsFound(String[] sentences) {
-
-        int length = sentences.length;
-
-        int max = 0;
-
+        int length = 0;
         for (int i = 0; i < sentences.length; i++) {
-
-            if (max < sentences[i].length()) {
-
-                max = sentences[i].length();
+            if(length < sentences[i].split(" ").length) {
+                length = sentences[i].split(" ").length;
             }
         }
-
-        for (int j = 0; j < sentences.length; j++) {
-
-            if (max == sentences[j].length()) {
-                System.out.println(sentences[j]);
-            }
-
-            return length;
-        }
+        return length;
+    }
 
 
-        public static void main (String[]args){
-            String[] sentences = {"alice and bob love leetcode", "i think so too", "this is great thanks very much"};
-            mostWordsFound(sentences);
-
-        }
+    public static void main(String[] args) {
+        String[] sentences = {"w jrpihe zsyqn l dxchifbxlasaehj", "nmmfrwyl jscqyxk a xfibiooix xolyqfdspkliyejsnksfewbjom", "xnleojowaxwpyogyrayfgyuzhgtdzrsyococuqexggigtberizdzlyrdsfvryiynhg", "krpwiazoulcixkkeyogizvicdkbrsiiuhizhkxdpssynfzuigvcbovm", "rgmz rgztiup wqnvbucfqcyjivvoeedyxvjsmtqwpqpxmzdupfyfeewxegrlbjtsjkusyektigr", "o lgsbechr lqcgfiat pkqdutzrq iveyv iqzgvyddyoqqmqerbmkxlbtmdtkinlk", "hrvh efqvjilibdqxjlpmanmogiossjyxepotezo", "qstd zui nbbohtuk", "qsdrerdzjvhxjqchvuewevyzlkyydpeeblpc"};
+        System.out.println(mostWordsFound(sentences));
     }
 }
