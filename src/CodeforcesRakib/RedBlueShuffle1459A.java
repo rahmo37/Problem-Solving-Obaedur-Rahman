@@ -10,15 +10,16 @@ public class RedBlueShuffle1459A {
         int t = scanner.nextInt();
 
         while (t-- > 0) {
+//            System.out.println("t inside While :" + t );
             int rc = 0, bc = 0;
             int n = scanner.nextInt();
             String r = scanner.next();
             String b = scanner.next();
-
+//            System.out.println(r + " " + b);
             for (int i = 0; i < n; i++) {
-                if (r.charAt(i) > b.charAt(i))
+                if (r.charAt(i) > b.charAt(i)) {
                     rc++;
-                else if (r.charAt(i) < b.charAt(i))
+                } else if (r.charAt(i) < b.charAt(i))
                     bc++;
                 else {
                     rc++;
