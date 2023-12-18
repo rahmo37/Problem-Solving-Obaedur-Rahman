@@ -12,3 +12,24 @@ Conditions and main Points
 
 * Multiple valid sequences of deletions can exist, leading to the same minimum length.
 
+
+Rakib Vai
+Solution:
+* If the number of characters are odd,
+  - the first character will be placed
+  - the second character will be placed and if it is similar with the first one both will be deleted
+  - if they are not similar the next character will be placed, if second and third are similar, then both
+  of the characters will be deleted.
+  - If the third character does not match with the second one, but matches with the first one, second and third
+  characters will be deleted
+  - this concept will repeat
+  - finally the remaining length of the character will be the answer
+  - a boolean variable `delete` will be true initially, if the next character is same as the last character placed
+  the 'delete' variable will be false and if next characters are same as the last placed character, we are not allowed
+  to delete it
+  - after that if another character is placed that is different from the character placed, the 'delete' variable
+  will be true, and will would be able to perform deletion.
+* If the number of characters are even,
+  - same rule applies as above, just we will subtract 2 from the final length of the string
+
+
