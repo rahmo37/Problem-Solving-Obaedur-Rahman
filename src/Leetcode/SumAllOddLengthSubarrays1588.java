@@ -9,7 +9,6 @@ public class SumAllOddLengthSubarrays1588 {
     public static int sumOddLengthSubarrays(int[] arr) {
         int n = arr.length;
         int subarraySum = 0;
-        int totalSum = 0;
 
         // Outer loop: starting index of subarray
         for (int i = 0; i < n; i++) {
@@ -20,7 +19,6 @@ public class SumAllOddLengthSubarrays1588 {
                     subarraySum += arr[k];
                 }
             }
-
         }
         return subarraySum;
     }
