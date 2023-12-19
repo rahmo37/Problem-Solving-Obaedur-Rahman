@@ -8,9 +8,7 @@ public class ToLowerCase709 {
 
 
      static String toLowerCase (String str){
-
          String lower = str.toLowerCase();
-
          return lower;
     }
 

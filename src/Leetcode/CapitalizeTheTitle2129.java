@@ -6,7 +6,7 @@ public class CapitalizeTheTitle2129 {
 
         String[] titleWordsArray = title.split(" ");
 
-        String [] arr = new String[titleWordsArray.length];
+        String[] arr = new String[titleWordsArray.length];
 
         String x = "";
 
@@ -14,13 +14,13 @@ public class CapitalizeTheTitle2129 {
 
             if (titleWordsArray[i].length() <= 2) {
 
-             x = titleWordsArray[i].toLowerCase();
+                x = titleWordsArray[i].toLowerCase();
 
             } else
 
-            x = titleWordsArray[i].substring(0, 1).toUpperCase() + titleWordsArray[i].substring(1).toLowerCase();
+                x = titleWordsArray[i].substring(0, 1).toUpperCase() + titleWordsArray[i].substring(1).toLowerCase();
 
-                arr[i] = x;
+            arr[i] = x;
         }
 
         String sentence = "";
