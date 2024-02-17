@@ -34,7 +34,6 @@ public class RemoveElement {
                 k++;
             }
         }
-        System.out.println(Arrays.toString(nums));
         return k;
     }
 }
