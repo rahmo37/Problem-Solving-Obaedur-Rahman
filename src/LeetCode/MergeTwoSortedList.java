@@ -10,10 +10,14 @@ public class MergeTwoSortedList {
         ListNode list1Example1 = new ListNode(1, new ListNode(2, new ListNode(4)));
         // Create the second sorted linked list for example 1.
         ListNode list2Example1 = new ListNode(1, new ListNode(3, new ListNode(4)));
+
         // Merge the two sorted linked lists for example 1.
         ListNode mergedExample1 = solution.mergeTwoLists(list1Example1, list2Example1);
         // Print the merged linked list for example 1.
         solution.printList(mergedExample1); // Output: 1 1 2 3 4 4
+
+
+
 
         // Create two empty linked lists for example 2.
         ListNode list1Example2 = null; // Empty list
@@ -46,7 +50,6 @@ public class MergeTwoSortedList {
             if (list1.val < list2.val) {
                 // Attach the smaller node to the merged list.
                 current.next = list1;
-                System.out.println(current.next + " " + list1);
                 // Move to the next node in list1.
                 list1 = list1.next;
             } else {
